@@ -14,6 +14,19 @@ var AdResolutions =
 
 var count = 0;
 
+function spawnIndieAd_ImageOnly(container, resolution)
+{
+    count += 1;
+    
+    var imgElement = document.createElement("img");
+    imgElement.className = "indiead-img"
+    imgElement.id = `indieads-img-${count}`;
+    
+    container.append(imgElement);
+    
+    fetchIndieAd("", imgElement.id, resolution)
+}
+
 function spawnIndieAd(container, resolution)
 {
     count += 1;
