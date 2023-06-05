@@ -50,17 +50,21 @@ async function fetchIndieAd(link_elementID, img_elementID, resolution) {
 
             document.getElementById(img_elementID).src = `https://indieads.github.io/stnemesitrevda/${foldername}/${resolution.w}x${resolution.h}.png`;
             
+            // only continue if we were provided with a link element
+            if (link_elementID == "")
+                return;
+
             fetch(`https://indieads.github.io/stnemesitrevda/${foldername}/href`)
-            .then((response) => {
-                if (!response.ok)
-                {
-                    return "Fetch Failed Error";
-                }
-                return response.text(); 
-            })
-            .then((response) => {
-                document.getElementById(link_elementID).href = `${response}`
-            })
+                .then((response) => {
+                    if (!response.ok)
+                    {
+                        return "Fetch Failed Error";
+                    }
+                    return response.text(); 
+                })
+                .then((response) => {
+                    document.getElementById(link_elementID).href = `${response}`
+                })
 
         });
 
