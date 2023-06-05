@@ -64,5 +64,3 @@ async function fetchIndieAd(link_elementID, img_elementID, resolution) {
         });
 
 }
-
-spawnAds();
