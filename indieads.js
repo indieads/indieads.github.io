@@ -12,18 +12,20 @@ var AdResolutions =
     Portrait_600x900 : {w : 600, h : 900},
 }
 
-
+var count = 0;
 
 function spawnIndieAd(container, resolution)
 {
+    count += 1;
+    
     var linkElement = document.createElement("a");
     linkElement.target = "_blank";
     linkElement.className = "indiead-link"
-    linkElement.id = `indieads-link-${i}`;
+    linkElement.id = `indieads-link-${count}`;
     
     var imgElement = document.createElement("img");
     imgElement.className = "indiead-img"
-    imgElement.id = `indieads-img-${i}`;
+    imgElement.id = `indieads-img-${count}`;
     
     linkElement.append(imgElement);
     container.append(linkElement);
