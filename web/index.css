@@ -6,16 +6,23 @@ font-family: 'Roboto', sans-serif;
 
 
 
+:root {
+    --c_background: rgb(29, 29, 43);
+    --c_segment:rgb(87, 87, 90);
+    --c_download:rgb(77, 77, 223);
+}
+
 html {
     font-size: 16px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     text-decoration: none;
 
-    background-color: black;
+    background-color: var(--c_background);
     color: white;
-}
 
+
+}
 
 #docs-js {
     height: 40vh;
@@ -32,7 +39,7 @@ html {
     height: auto;
     width: 40%;
 
-    background-color: rgb(207, 207, 207);
+    background-color: var(--c_segment);
     border-radius: 1em;
 }
 
@@ -40,12 +47,12 @@ html {
     position: relative;
     display: block;
     
-    margin: 0.5em 1em;
+    margin: 0.5em auto;
     padding: 0.2em 0.4em;
     font-size: 2em;
     width: fit-content;
 
-    background-color: rgb(35, 66, 124);
+    background-color: var(--c_background);
     color: white;
     border-radius: 0.4em;
 }
@@ -56,14 +63,14 @@ html {
     display: block;
 
 
-    padding: 0.4em 0.6em;
+    padding: 2em 1em;
     margin: 2em;
 
     width: fit-content;
     height: auto;
 
 
-    background-color: rgb(58, 51, 65);
+    background-color: var(--c_background);
     color: white;
     border-radius: 0.2em;
 }
@@ -84,7 +91,7 @@ html {
     height: auto;
 
 
-    background-color: rgb(67, 131, 65);
+    background-color: var(--c_download);
     color: white;
     border-radius: 0.2em;
 }
