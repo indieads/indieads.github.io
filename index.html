@@ -7,6 +7,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
         <!-- Local Stylesheets -->
+        <link rel="stylesheet" href="indieads.css" media="screen">
         <link rel="stylesheet" href="web/index.css" media="screen">
         
         
@@ -54,18 +55,25 @@
                 <div class="segment-title">
                     Javascript & HTML
                 </div>
-
-                <div id="ads-holder">
-                    <div class="indieads 231x87"></div>
-                    <div class="indieads 231x87"></div>
-                    <div class="indieads 231x87"></div>
+                
+                <div id="ads-container">
+                    <div class="ads-holder">
+                        <div class="indieads 320x50"></div>
+                        <div class="indieads 320x50"></div>
+                    </div>
+                    
+                    <div class="ads-holder">
+                        <div class="indieads 231x87"></div>
+                        <div class="indieads 231x87"></div>
+                        <div class="indieads 231x87"></div>
+                    </div>
                 </div>
 
                 <div class="segment-description">
                     Here you will find the documentation describing how to use the IndieAds API on your HTML website.
                     <br>
                     <br>
-                    Below you can also download some simple scripts that make it possible to use IndieAds without having to write Javascript.
+                    Below you can also download a simple Javascript file that makes it possible to use IndieAds without having to write Javascript.
                 </div>
 
 
@@ -188,17 +196,19 @@
                 </div>
 
                 <div style="display: flex; margin: auto;">
-                    <a class="" id="download-button" href="web/indieads.css" download="indieads.css">
+                    <a class="" id="download-button" href="indieads.css" download="indieads.css">
                         <p class="no-margin dl-desc">indieads.css</p>
                         <p class="no-margin">Download [2KB]</p>
                     </a>
-    
                     <a class="" id="download-button" href="web/indieadsloader.js" download="indieadsloader.js">
                         <p class="no-margin dl-desc">indieadsloader.js</p>
                         <p class="no-margin">Download [2KB]</p>
                     </a>
                 </div>
             </div>
+
+
+            <!-- unity segment -->
 
             <div id="docs-unity" class="segment">
                 <div class="segment-title">
