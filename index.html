@@ -32,9 +32,49 @@
 
         <!-- container for blogpost rows -->
         <div id="main-container">
+            
             <div id="docs-js" class="segment">
-
+                <div class="segment-title">
+                    Javascript & HTML
+                </div>
+                <div id="docs-container">
+                    <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Findieads%2Findieads.github.io%2Fblob%2Fmain%2Findieads.js&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
+                    <button id="docs-unfold" onclick="foldunfolddocscode()">Unfold</button>
+                    <script>
+                        var docscode = document.body.getElementsByClassName("emgithub-file")[0];
+                        var foldButton = document.getElementById("docs-unfold");
+                        function foldunfolddocscode()
+                        {
+                        if (docscode.style.height != "100px")
+                        {
+                            docscode.style.height = "100px";
+                            foldButton.innerText = "Unfold";
+                        }
+                        else
+                        {
+                            docscode.style.height = "auto";
+                            foldButton.innerText = "Collapse";
+                        }
+                        }
+                        // run first time to collapse
+                        foldunfolddocscode();
+                    </script>
+                </div>
+                <div id="ads-holder">
+                    <div class="indieads 231x87"></div>
+                    <div class="indieads 231x87"></div>
+                    <div class="indieads 231x87"></div>
+                </div>
+                <div class="segment-description">
+                    Follow the documentation to use the API.
+                    Additionally download this basic "indieadsloader.js" script.
+                </div>
+                <a class="" id="download-button" href="IndieAds.unitypackage" download="IndieAds">
+                    <p class="no-margin dl-desc">indieadsloader.js</p>
+                    <p class="no-margin">Download [2KB]</p>
+                </a>
             </div>
+
             <div id="docs-unity" class="segment">
                 <div class="segment-title">
                     Unity Package
@@ -43,8 +83,14 @@
                 <div class="segment-description">
                     The Unity Package uses HTTPRequests to fetch the ads and automatically replaces UI Images or Material Textures. All you need to do is attach the scripts and assign the Ad-Size
                 </div>
-                <a class="" id="download-button" href="IndieAds.unitypackage" download="IndieAds">Download [294KB]</a>
+                <a class="" id="download-button" href="IndieAds.unitypackage" download="IndieAds">
+                    <p class="no-margin dl-desc">IndieAds.unitypackage</p>
+                    <p class="no-margin">Download [294KB]</p>
+                </a>
             </div>
+
+
+
             <h1>
                 indieads.github.io
             </h1>
@@ -57,7 +103,7 @@
             </p>
         </div>
         
-
+        <script src="indieadsloader.js"></script>
     </body>
 
 </html>

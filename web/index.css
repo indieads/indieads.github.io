@@ -25,7 +25,6 @@ html {
 }
 
 #docs-js {
-    height: 40vh;
 }
 
 
@@ -75,7 +74,23 @@ html {
     border-radius: 0.2em;
 }
 
+.no-margin {
+    margin: auto;
+    padding: 0;
+}
+.dl-desc {
+    color: rgb(191, 195, 214);
+}
 
+#ads-holder {
+    position: relative;
+    display: flex;
+
+    width: fit-content;
+    margin: auto;
+    padding: 1px;
+    overflow: hidden;
+}
 
 #download-button {
     position: relative;
@@ -85,7 +100,7 @@ html {
     text-decoration: none;
 
     padding: 1em 2em;
-    margin: auto auto 1em auto;
+    margin: auto auto 2em auto;
 
     width: fit-content;
     height: auto;
@@ -98,6 +113,9 @@ html {
 
 
 
+.indieads {
+    outline: 1px white solid;
+}
 
 
 
@@ -105,14 +123,24 @@ html {
 
 
 
+.emgithub-file {
+    padding-top: 0 !important;
+    margin: 0 !important;
+}
 
 
+#docs-container {
+    position: relative;
+    margin: 2em;
+}
 
+#docs-unfold {
+    position: absolute;
+    display: block;
 
-
-
-
-
+    left: 0;
+    top: 0;
+}
 
 
 

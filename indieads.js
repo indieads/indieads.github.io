@@ -1,5 +1,3 @@
-
-
 var AdResolutions =
 {
     // Standard mobile banner size
