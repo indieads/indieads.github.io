@@ -50,7 +50,13 @@ function loadAdGallery()
 loadAdGallery();
 
 // Will open new page on click
-spawnIndieAd(indieads[i], AdResolutions.Banner_320x50);
+spawnIndieAd(ad_1, AdResolutions.Banner_320x50);
 
 // Not clickable
-spawnIndieAd_ImageOnly(indieads[i], AdResolutions.Banner_320x50);
+spawnIndieAd_ImageOnly(ad_2, AdResolutions.Banner_231x87);
+
+
+
+
+
+

@@ -24,8 +24,6 @@ html {
 
 }
 
-#docs-js {
-}
 
 
 .segment {
@@ -34,9 +32,10 @@ html {
     
     flex-direction: column;
     margin: 2em auto;
+    padding: 2em;
     
     height: auto;
-    width: 40%;
+    width: 38%;
 
     background-color: var(--c_segment);
     border-radius: 1em;
@@ -63,16 +62,47 @@ html {
 
 
     padding: 2em 1em;
-    margin: 2em;
+    margin: 2em 0;
 
     width: fit-content;
     height: auto;
 
 
     background-color: var(--c_background);
-    color: white;
+    color: rgba(221, 221, 221, 0.95);
     border-radius: 0.2em;
 }
+
+.segment-info
+{
+    position: relative;
+    display: block;
+
+    padding: 1em;
+    margin: 0.4em 0;
+
+    width: auto;
+    height: auto;
+
+    font-weight: 400;
+
+    background-color: var(--c_background);
+    color: rgba(255, 255, 255, 0.82);
+    border-radius: 0.2em;
+}
+.sub-title
+{
+    color: rgb(255, 255, 255, 0.9);
+    font-weight: 500;
+    text-align: center;
+}
+
+.screenshot-small {
+    max-width: 80%;
+    margin: auto;
+}
+
+
 
 .no-margin {
     margin: auto;
@@ -87,7 +117,7 @@ html {
     display: flex;
 
     width: fit-content;
-    margin: auto;
+    margin: 1em auto;
     padding: 1px;
     overflow: hidden;
 }
@@ -100,7 +130,7 @@ html {
     text-decoration: none;
 
     padding: 1em 2em;
-    margin: auto auto 2em auto;
+    margin: 2em;
 
     width: fit-content;
     height: auto;
@@ -131,7 +161,7 @@ html {
 
 #docs-container {
     position: relative;
-    margin: 2em;
+    margin: 0;
 }
 
 #docs-unfold {

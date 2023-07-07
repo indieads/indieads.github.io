@@ -37,6 +37,24 @@
                 <div class="segment-title">
                     Javascript & HTML
                 </div>
+
+                <div id="ads-holder">
+                    <div class="indieads 231x87"></div>
+                    <div class="indieads 231x87"></div>
+                    <div class="indieads 231x87"></div>
+                </div>
+
+                <div class="segment-description">
+                    Here you will find the documentation describing how to use the IndieAds API on your HTML website.
+                    <br>
+                    <br>
+                    Below you can also download some simple scripts that make it possible to use IndieAds without having to write Javascript.
+                </div>
+
+
+                <div class="segment-info sub-title">
+                    Source code:
+                </div>
                 <div id="docs-container">
                     <script src="https://emgithub.com/embed-v2.js?target=https%3A%2F%2Fgithub.com%2Findieads%2Findieads.github.io%2Fblob%2Fmain%2Findieads.js&style=default&type=code&showBorder=on&showLineNumbers=on&showFileMeta=on&showFullPath=on&showCopy=on"></script>
                     <button id="docs-unfold" onclick="foldunfolddocscode()">Unfold</button>
@@ -45,9 +63,9 @@
                         var foldButton = document.getElementById("docs-unfold");
                         function foldunfolddocscode()
                         {
-                        if (docscode.style.height != "100px")
+                        if (docscode.style.height != "8em")
                         {
-                            docscode.style.height = "100px";
+                            docscode.style.height = "8em";
                             foldButton.innerText = "Unfold";
                         }
                         else
@@ -55,24 +73,114 @@
                             docscode.style.height = "auto";
                             foldButton.innerText = "Collapse";
                         }
-                        }
-                        // run first time to collapse
-                        foldunfolddocscode();
+                    }
+                    // run first time to collapse
+                    foldunfolddocscode();
                     </script>
                 </div>
-                <div id="ads-holder">
-                    <div class="indieads 231x87"></div>
-                    <div class="indieads 231x87"></div>
-                    <div class="indieads 231x87"></div>
+
+                <div class="segment-title">
+                    Implementation
                 </div>
-                <div class="segment-description">
-                    Follow the documentation to use the API.
-                    Additionally download this basic "indieadsloader.js" script.
+
+                <div class="segment-info sub-title">
+                    HTML:
                 </div>
-                <a class="" id="download-button" href="IndieAds.unitypackage" download="IndieAds">
-                    <p class="no-margin dl-desc">indieadsloader.js</p>
-                    <p class="no-margin">Download [2KB]</p>
-                </a>
+                <img src="web/screenshot_apifetch.png" class="screenshot-small">
+                <div class="segment-info">
+                    Write the above line in the < header > of your HTML document.
+                </div>
+                <img src="web/screenshot_html.png" class="screenshot-small">
+                <div class="segment-info">
+                    To display an Indie Ad on your page, simply write the above line in your HTML document.
+                    <br>
+                    <br>
+                    The div has to be inside the < body > of the page.
+                    <br>
+                    <br>
+                    Only the class name "indieads" is needed for the API to work.
+                    <br>
+                    <br>
+                    You can add the size to the classnames if you are using the free script available below.
+                </div>
+                <div class="segment-info sub-title">
+                    CSS:
+                </div>
+                <img src="web/screenshot_css.png" class="screenshot-small">
+                <div class="segment-info">
+                    By default, the ads will take the size of their resolution.
+                    <br>
+                    <br>
+                    You can change this manually by doing standard css.
+                    <br>
+                    <br>
+                    Here, I have given all ads a white outline.
+                </div>
+                <div class="segment-info sub-title">
+                    Javascript:
+                </div>
+                <div class="segment-info">
+                    No custom javascript is needed if you use the script below.
+                    <br>
+                    <br>
+                    This script will automatically spawn all ads if your divs meet the following criteria:
+                    <br>
+                    - "indieads" is the first classname.
+                    <br>
+                    - The second classname is the resolution. Example: "231x87", Also see CSS screenshot.
+                </div>
+                <img src="web/screenshot_js.png" class="screenshot-small">
+                <div class="segment-info">
+                    If you want to manually control the js, these two functions are all that is required to use the API.
+                    <br>
+                    <br>
+                    spawnIndieAd(ad, res) will spawn a clickable ad which opens a new page when clicked.
+                    <br>
+                    spawnIndieAd_ImageOnly(ad, res) will spawn the same ad, except it can't be clicked.
+                    <br>
+                    <br>
+                    "ad_1" and "ad_2" are references to the div elements you created above.
+                    <br>
+                    <br>
+                    The resolution parameter takes one of the resolutions below.
+                </div>
+                <div class="segment-info sub-title">
+                    Ad Resolutions:
+                </div>
+                <div class="segment-info">
+                    AdResolutions.Banner_320x50
+                    <br>
+                    <br>
+                    AdResolutions.Landscape_231x87
+                    <br>
+                    <br>
+                    AdResolutions.Landscape_460x215
+                    <br>
+                    <br>
+                    AdResolutions.Landscape_616x253
+                    <br>
+                    <br>
+                    AdResolutions.Portrait_374x448
+                    <br>
+                    <br>
+                    AdResolutions.Portrait_600x900
+                </div>
+
+                <div class="segment-info sub-title">
+                    Downloads:
+                </div>
+
+                <div style="display: flex; margin: auto;">
+                    <a class="" id="download-button" href="web/indieads.css" download="indieads.css">
+                        <p class="no-margin dl-desc">indieads.css</p>
+                        <p class="no-margin">Download [2KB]</p>
+                    </a>
+    
+                    <a class="" id="download-button" href="web/indieadsloader.js" download="indieadsloader.js">
+                        <p class="no-margin dl-desc">indieadsloader.js</p>
+                        <p class="no-margin">Download [2KB]</p>
+                    </a>
+                </div>
             </div>
 
             <div id="docs-unity" class="segment">
