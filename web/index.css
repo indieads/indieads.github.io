@@ -160,7 +160,7 @@ a:-webkit-any-link {
     align-content: center;
 
     width: auto;
-    overflow: hidden;
+    overflow: hidden none;
 }
 
 #download-button {
