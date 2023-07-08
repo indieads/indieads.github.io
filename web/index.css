@@ -128,7 +128,7 @@ a:-webkit-any-link {
     color: rgb(191, 195, 214);
 }
 
-#ads-container {
+#indieadscontainer {
     position: relative;
     display: flex;
 
@@ -146,7 +146,7 @@ a:-webkit-any-link {
     overflow: hidden none;
 }
 
-.ads-holder {
+.indieadsholder {
     position: relative;
     display: flex;
     
