@@ -37,6 +37,9 @@ a:-webkit-any-link {
     margin: auto;
 }
 
+.black-outline {
+    outline: 2px black solid;
+}
 
 .segment {
     position: relative;
@@ -194,12 +197,12 @@ a:-webkit-any-link {
 }
 
 
-#docs-container {
+.docs-container {
     position: relative;
     margin: 0;
 }
 
-#docs-unfold {
+.docs-buttons {
     position: absolute;
     display: block;
 
@@ -207,6 +210,21 @@ a:-webkit-any-link {
     top: 0;
 }
 
+.docs-button {
+    outline: none;
+    border: none;
+    margin: 0;
+    padding: 0.3em 0.4em;
+
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 1em;
+
+
+    background-color: rgba(43, 43, 110, 0.8);
+    color: white;
+}
 
 
 
