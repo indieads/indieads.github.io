@@ -11,7 +11,7 @@ font-family: 'Roboto', sans-serif;
 }
 
 html {
-    font-size: 16px;
+    font-size: 14px;
     font-family: 'Roboto', sans-serif;
     font-weight: 500;
     text-decoration: none;
@@ -26,16 +26,28 @@ a:-webkit-any-link {
     text-decoration: none;
 }
 
+#segment-holder {
+    position: relative;
+    display: flex;
+    flex-flow: row;
+
+    justify-content: center;
+
+    width: 100%;
+    margin: auto;
+}
+
+
 .segment {
     position: relative;
     display: flex;
     
     flex-direction: column;
-    margin: 2em auto;
+    margin: 2em 1em;
     padding: 2em;
     
-    height: auto;
-    width: 38%;
+    height: fit-content;
+    width: 35%;
 
     background-color: var(--c_segment);
     border-radius: 1em;
