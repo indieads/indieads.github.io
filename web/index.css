@@ -37,9 +37,6 @@ a:-webkit-any-link {
     margin: auto;
 }
 
-.black-outline {
-    outline: 2px black solid;
-}
 
 .segment {
     position: relative;
@@ -115,6 +112,8 @@ a:-webkit-any-link {
 .screenshot-small {
     max-width: 80%;
     margin: auto;
+    outline: 2px black solid;
+    border-radius: 0.2em;
 }
 
 
@@ -206,8 +205,9 @@ a:-webkit-any-link {
     position: absolute;
     display: block;
 
-    left: 0;
+    left: 50%;
     top: 0;
+    transform: translateX(-50%);
 }
 
 .docs-button {
@@ -224,6 +224,7 @@ a:-webkit-any-link {
 
     background-color: rgba(43, 43, 110, 0.8);
     color: white;
+    border-radius: 0.2em;
 }
 
 
