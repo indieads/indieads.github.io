@@ -229,3 +229,40 @@ a:-webkit-any-link {
 
 
 
+@media (max-width: 1000px) {
+    .segment {
+        width: 60%;
+    }
+    #segment-holder {
+        flex-flow: column;
+        align-items: center;
+    }
+}
+
+
+
+
+@media (max-width: 600px) {
+    .segment {
+        width: 92%;
+    }
+    #segment-holder {
+        flex-flow: column;
+        align-items: center;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
