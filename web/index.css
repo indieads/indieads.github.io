@@ -8,6 +8,7 @@ font-family: 'Roboto', sans-serif;
     --c_background: rgb(29, 29, 43);
     --c_segment:rgb(87, 87, 90);
     --c_download:rgb(77, 77, 223);
+    --c_smallbutton:rgb(43, 43, 110, 0.8);
 }
 
 html {
@@ -46,8 +47,9 @@ a:-webkit-any-link {
     margin: 2em 1em;
     padding: 2em;
     
-    height: fit-content;
-    width: 35%;
+    overflow: hidden;
+    height: 30em;
+    width: 26%;
 
     background-color: var(--c_segment);
     border-radius: 1em;
@@ -141,17 +143,17 @@ a:-webkit-any-link {
 
     width: auto;
     margin: 1em auto;
-    overflow: hidden;
+    overflow: hidden none;
 }
 
 .ads-holder {
     position: relative;
     display: flex;
-
+    
     gap: 2px;
     line-height: 0;
     padding: 2px;
-
+    
     flex-flow: row;
     align-items: center;
     justify-content: center;
@@ -196,9 +198,17 @@ a:-webkit-any-link {
 }
 
 
+.emgithub-container {
+    display: flex;
+    width: auto;
+    margin: 0;
+}
+
+
 .docs-container {
     position: relative;
     margin: 0;
+    width: auto;
 }
 
 .docs-buttons {
@@ -222,14 +232,38 @@ a:-webkit-any-link {
     font-size: 1em;
 
 
-    background-color: rgba(43, 43, 110, 0.8);
+    background-color: var(--c_smallbutton);
     color: white;
     border-radius: 0.2em;
 }
 
 
+.maximize {
+    position: absolute;
+    display: block;
+
+    margin: 0;
+    padding: 0.4em 0.3em;
+
+    top: 0.5em;
+    right: 0.5em;
+
+
+    color: white;
+    background-color: var(--c_smallbutton);
+    border-radius: 0.4em;
+    border: none;
+}
+
+.maximized {
+    width: 50%;
+    height: fit-content;
+}
 
 @media (max-width: 1000px) {
+    .maximize {
+        display: none;
+    }
     .segment {
         width: 60%;
     }
@@ -242,7 +276,7 @@ a:-webkit-any-link {
 
 
 
-@media (max-width: 600px) {
+@media (max-width: 720px) {
     .segment {
         width: 92%;
     }

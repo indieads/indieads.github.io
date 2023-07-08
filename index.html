@@ -44,15 +44,18 @@
                 <p>
                     In the future you will be able to upload your capsules and href file through the API and use it yourself in both Unity and HTML/Javascript.
                 </p>
-                
-                
                 <h1>
                     Indie Ads Documentation:
                 </h1>
             </div>
 
             <div id="segment-holder">
+                <!-- javascript segment-->
                 <div id="docs-js" class="segment">
+                    <button class="maximize" onclick="maximizeJS(this)">
+                        Maximize
+                    </button>
+
                     <div class="segment-title">
                         Javascript & HTML
                     </div>
@@ -219,9 +222,14 @@
                 <!-- unity segment -->
 
                 <div id="docs-unity" class="segment">
+                    <button class="maximize" onclick="maximizeUnity(this)">
+                        Maximize
+                    </button>
+
                     <div class="segment-title">
                         Unity Package
                     </div>
+
                     <img src="web/screenshot_unity.png" class="screenshot-small">
                     <div class="segment-description">
                         The Unity Package uses HTTPRequests to fetch the ads and automatically replaces UI Images or Material Textures.
@@ -306,9 +314,50 @@
             </div>
 
 
-
-
         </div>
+
+
+        <script>
+            var unity = document.getElementById("docs-unity");
+            var js = document.getElementById("docs-js");
+
+
+            function maximizeJS(buttonelement)
+            {
+                // turn off unity
+                if (unity.style.display != "none")
+                {
+                    unity.style.display = "none";
+                    buttonelement.innerText = "Minimize"
+                    js.classList.add("maximized");
+                }
+                else
+                {
+                    buttonelement.innerText = "Maximize"
+                    unity.style.display = "flex";
+                    js.classList.remove("maximized");
+                }
+            }
+            
+
+            function maximizeUnity(buttonelement)
+            {
+                // turn off unity
+                if (js.style.display != "none")
+                {
+                    js.style.display = "none";
+                    buttonelement.innerText = "Minimize"
+                    unity.classList.add("maximized");
+                }
+                else
+                {
+                    buttonelement.innerText = "Maximize"
+                    js.style.display = "flex";
+                    unity.classList.remove("maximized");
+                }
+            }
+            
+        </script>
         
         <!-- Spawn IndieAds -->
         <script src="downloads/indieadsloader.js"></script>
