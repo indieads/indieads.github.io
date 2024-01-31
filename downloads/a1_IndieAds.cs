@@ -78,7 +78,11 @@ public class a1_IndieAds : MonoBehaviour
 
     private void OnDisable()
     {
-        StopCoroutine(refreshRoutine);
+        // remove all ad references when the scene closes so it doesnt duplicate on reload
+        ads.Clear();
+
+        if (refreshRoutine != null)
+            StopCoroutine(refreshRoutine);
     }
 
     private void Start()
