@@ -10,7 +10,7 @@ var AdResolutions =
     Portrait_600x900 : {w : 600, h : 900},
 }
 
-const foldernames =
+const indieads_Foldernames =
 [
   "spacevoyage",
   "calciumchaos",
@@ -19,15 +19,15 @@ const foldernames =
 ]
 
 
-var count = 0;
+var indieads_Count = 0;
 
 function spawnIndieAd_ImageOnly(container, resolution)
 {
-    count += 1;
+    indieads_Count += 1;
     
     var imgElement = document.createElement("img");
     imgElement.className = "indiead-img"
-    imgElement.id = `indieads-img-${count}`;
+    imgElement.id = `indieads-img-${indieads_Count}`;
     
     container.append(imgElement);
     
@@ -36,16 +36,16 @@ function spawnIndieAd_ImageOnly(container, resolution)
 
 function spawnIndieAd(container, resolution)
 {
-    count += 1;
+    indieads_Count += 1;
     
     var linkElement = document.createElement("a");
     linkElement.target = "_blank";
     linkElement.className = "indiead-link"
-    linkElement.id = `indieads-link-${count}`;
+    linkElement.id = `indieads-link-${indieads_Count}`;
     
     var imgElement = document.createElement("img");
     imgElement.className = "indiead-img"
-    imgElement.id = `indieads-img-${count}`;
+    imgElement.id = `indieads-img-${indieads_Count}`;
     
     linkElement.append(imgElement);
     container.append(linkElement);
@@ -55,7 +55,7 @@ function spawnIndieAd(container, resolution)
 
 async function fetchIndieAd(link_elementID, img_elementID, resolution) {
     
-    let foldername = foldernames[Math.floor(Math.random() * foldernames.length)];
+    let foldername = indieads_Foldernames[Math.floor(Math.random() * indieads_Foldernames.length)];
 
     document.getElementById(img_elementID).src = `https://indieads.github.io/stnemesitrevda/${foldername}/${resolution.w}x${resolution.h}.png`;
     
