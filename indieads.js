@@ -14,6 +14,7 @@ const foldernames =
 [
   "spacevoyage",
   "calciumchaos",
+  "outlawkingdom",
   "corr"
 ]
 
