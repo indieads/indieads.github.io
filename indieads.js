@@ -10,6 +10,14 @@ var AdResolutions =
     Portrait_600x900 : {w : 600, h : 900},
 }
 
+const foldernames =
+[
+  "spacevoyage",
+  "calciumchaos",
+  "corr"
+]
+
+
 var count = 0;
 
 function spawnIndieAd_ImageOnly(container, resolution)
@@ -46,34 +54,23 @@ function spawnIndieAd(container, resolution)
 
 async function fetchIndieAd(link_elementID, img_elementID, resolution) {
     
+    let foldername = foldernames[Math.floor(Math.random() * foldernames.length)];
 
-    // fetch the json game info file
-    fetch(`https://indieads.github.io/foldernames.json`)
-        .then((response) => { return response.json(); })
-        .then((response) =>  {
-            
-            let foldernames = response["foldernames"];
+    document.getElementById(img_elementID).src = `https://indieads.github.io/stnemesitrevda/${foldername}/${resolution.w}x${resolution.h}.png`;
+    
+    // only continue if we were provided with a link element
+    if (link_elementID == "")
+        return;
 
-            let foldername = foldernames[Math.floor(Math.random() * foldernames.length)];
-
-            document.getElementById(img_elementID).src = `https://indieads.github.io/stnemesitrevda/${foldername}/${resolution.w}x${resolution.h}.png`;
-            
-            // only continue if we were provided with a link element
-            if (link_elementID == "")
-                return;
-
-            fetch(`https://indieads.github.io/stnemesitrevda/${foldername}/href`)
-                .then((response) => {
-                    if (!response.ok)
-                    {
-                        return "Fetch Failed Error";
-                    }
-                    return response.text(); 
-                })
-                .then((response) => {
-                    document.getElementById(link_elementID).href = `${response}`
-                })
-
-        });
-
+    fetch(`https://indieads.github.io/stnemesitrevda/${foldername}/href`)
+        .then((response) => {
+            if (!response.ok)
+            {
+                return "Fetch Failed Error";
+            }
+            return response.text(); 
+        })
+        .then((response) => {
+            document.getElementById(link_elementID).href = `${response}`
+        })
 }
