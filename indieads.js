@@ -31,7 +31,8 @@ function spawnIndieAd_ImageOnly(container, resolution)
     
     container.append(imgElement);
     
-    fetchIndieAd("", imgElement.id, resolution)
+    fetchIndieAd("", imgElement, resolution);
+    
 }
 
 function spawnIndieAd(container, resolution)
@@ -50,14 +51,16 @@ function spawnIndieAd(container, resolution)
     linkElement.append(imgElement);
     container.append(linkElement);
     
-    fetchIndieAd(linkElement.id, imgElement.id, resolution)
+    fetchIndieAd(linkElement.id, imgElement, resolution)
 }
 
-async function fetchIndieAd(link_elementID, img_elementID, resolution) {
+async function fetchIndieAd(link_elementID, img_element, resolution) {
     
     let foldername = indieads_Foldernames[Math.floor(Math.random() * indieads_Foldernames.length)];
 
-    document.getElementById(img_elementID).src = `https://indieads.github.io/stnemesitrevda/${foldername}/${resolution.w}x${resolution.h}.png`;
+    // before when we didnt pass the element, ID was the way to get the reference back
+    //document.getElementById(img_elementID).src = `https://indieads.github.io/stnemesitrevda/${foldername}/${resolution.w}x${resolution.h}.png`;
+    img_element.src = `https://indieads.github.io/stnemesitrevda/${foldername}/${resolution.w}x${resolution.h}.png`;
     
     // only continue if we were provided with a link element
     if (link_elementID == "")
