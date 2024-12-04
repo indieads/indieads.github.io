@@ -5,7 +5,7 @@ var AdResolutions =
     // These you will already have if you release on steam
     Landscape_231x87 : {w : 231, h : 87},
     Landscape_460x215 : {w : 460, h : 215},
-    Landscape_616x253 : {w : 616, h : 353},
+    Landscape_616x353 : {w : 616, h : 353},
     Portrait_374x448 : {w : 374, h : 448},
     Portrait_600x900 : {w : 600, h : 900},
 }
