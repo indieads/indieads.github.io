@@ -1,10 +1,8 @@
-{
-    "IDs":[
-        {"spacevoyage":"2101690"},
-        {"outlawkingdom":"2367460"},
-        {"calciumchaos":"1951650"},
-        {"corr":"2330260"},
-        {"godstone":"1715030"},
-        {"tarogue":"2909710"}
-    ]
-}
+[
+    {"spacevoyage":"2101690"},
+    {"outlawkingdom":"2367460"},
+    {"calciumchaos":"1951650"},
+    {"corr":"2330260"},
+    {"godstone":"1715030"},
+    {"tarogue":"2909710"}
+]
