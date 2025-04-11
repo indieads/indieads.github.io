@@ -1,10 +1,10 @@
 {
     "IDs":[
-        {"Key":"spacevoyage","Value":"2101690"},
-        {"outlawkingdom":"2367460"},
-        {"calciumchaos":"1951650"},
-        {"corr":"2330260"},
-        {"godstone":"1715030"},
-        {"tarogue":"2909710"}
+        {"Title":"spacevoyage","ID":"2101690"},
+        {"Title":"outlawkingdom","ID":"2367460"},
+        {"Title":"calciumchaos","ID":"1951650"},
+        {"Title":"corr","ID":"2330260"},
+        {"Title":"godstone","ID":"1715030"},
+        {"Title":"tarogue","ID":"2909710"}
     ]
 }
