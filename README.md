@@ -4,7 +4,8 @@ DOCUMENTATION:
 https://indieads.github.io/
 
 The API is currently:
-Running
+Running a deprecated version
+Being reworked
 
 
 __
